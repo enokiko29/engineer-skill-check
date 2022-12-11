@@ -718,3 +718,23 @@ Processing by EmployeesController#new as HTML
 Completed 200 OK in 227ms (Views: 175.3ms | ActiveRecord: 19.3ms | Allocations: 29883)
 
 
+Started GET "/employees/new" for 172.18.0.1 at 2022-12-11 07:40:26 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by EmployeesController#new as HTML
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/new.html.erb within layouts/application
+  [1m[36mDepartment Load (1.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/views/employees/_form.html.erb:46
+  [1m[36mOffice Load (1.1ms)[0m  [1m[34mSELECT "offices".* FROM "offices"[0m
+  ↳ app/views/employees/_form.html.erb:51
+  Rendered employees/_form.html.erb (Duration: 16.2ms | Allocations: 4729)
+  Rendered employees/new.html.erb within layouts/application (Duration: 18.9ms | Allocations: 5064)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 21.6ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 76.1ms | Allocations: 10033)
+Completed 200 OK in 86ms (Views: 77.3ms | ActiveRecord: 3.6ms | Allocations: 11973)
+
+
